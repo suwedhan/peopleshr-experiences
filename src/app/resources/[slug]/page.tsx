@@ -173,7 +173,7 @@ export default async function ArticlePage({ params }: Props) {
           </div>
 
           <aside className="hidden lg:block">
-            <nav aria-label="On this page" className="sticky top-6">
+            <nav aria-label="On this page" className="sticky top-28">
               <p className="font-semibold">On this page</p>
               {toc}
             </nav>

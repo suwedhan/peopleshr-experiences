@@ -26,7 +26,7 @@ export function Footer() {
             ))}
             <li>
               <Link href="/#book-demo" className="text-white/90 hover:text-white hover:underline">
-                Book a demo
+                Request a demo
               </Link>
             </li>
           </ul>

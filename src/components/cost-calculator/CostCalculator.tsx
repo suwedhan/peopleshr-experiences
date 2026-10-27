@@ -245,7 +245,7 @@ export function CostCalculator() {
           />
         </form>
 
-        <div id="results" ref={resultsRef} className="scroll-mt-6 lg:sticky lg:top-6">
+        <div id="results" ref={resultsRef} className="scroll-mt-6 lg:sticky lg:top-28">
           <ResultsPanel result={result} currency={currency} employees={employees} />
         </div>
       </div>

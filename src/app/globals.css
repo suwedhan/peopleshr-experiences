@@ -28,6 +28,8 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Keeps anchor targets clear of the floating header */
+    scroll-padding-top: 6rem;
   }
 
   body {
