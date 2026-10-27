@@ -1,12 +1,20 @@
 import type { MetadataRoute } from "next";
+import { ARTICLES } from "@/lib/articles";
 import { siteConfig } from "@/lib/site";
 
-// Guide article URLs get added here once the resources section is built.
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/cost-calculator", "/plan-finder", "/resources"];
-  return routes.map((route) => ({
+  const pages: MetadataRoute.Sitemap = ["", "/cost-calculator", "/plan-finder", "/resources"].map((route) => ({
     url: `${siteConfig.url}${route}`,
     changeFrequency: "monthly",
     priority: route === "" ? 1 : 0.8,
   }));
+
+  const guides: MetadataRoute.Sitemap = ARTICLES.map((article) => ({
+    url: `${siteConfig.url}/resources/${article.slug}`,
+    lastModified: article.updated,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...pages, ...guides];
 }
